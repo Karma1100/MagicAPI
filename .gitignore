@@ -1,1 +1,2 @@
-Stuff for git to ignore
+#Stuff for git to ignore
+.env

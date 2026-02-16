@@ -7,7 +7,7 @@ int main()
 {
 	printf("hello there\n");
 		
-
+	PQConnectParm();
 
 
 	return 0;
