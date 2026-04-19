@@ -2,7 +2,7 @@
 #include <libpq.h>
 #include "mongoose.h"
 #include <time.h>
-
+#include <pthread.h>
 
 enum get_req
 {
@@ -14,6 +14,12 @@ enum get_req
 	PUT_DECK_EVAL
 };
 
+struct os_memory_map
+{
+	void *payload;
+	void *return_load;
+	pthread_mutex_t *lock;
+}
 
 struct api_request
 {
@@ -26,9 +32,13 @@ struct api_request
 
 }
 
-static void fn()
-{
 
+
+
+
+static void fn(struct mg_connection conn, enum get_req request, char load[50]) //load will change to void * when the payload includes PUT reuquests)
+{
+	
 
 }
 
